@@ -87,8 +87,8 @@ Scenario: bike tab - Layout and behaviour - assembly groups
 
 Given I am on the home page (passed after 4.762 sec)
 When I search for bike brand APRILIA, model AREA and type AREA 51 CatCon on the bikes tab (failed after 2.696 sec)
-And I select the history dropdown on bikes tab (skipped after NaN sec)
-Then the bikes history should be shown (skipped after NaN sec)
+And I select the history dropdown on bikes tab (skipped)
+Then the bikes history should be shown (skipped)
 ]]></system-out>
         </testcase>
     </testsuite>

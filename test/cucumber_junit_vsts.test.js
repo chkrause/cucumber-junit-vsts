@@ -14,7 +14,6 @@ describe('#cucumber_junit_vsts', function() {
             outputXml = loadFile('normal/output.xml');
         var options = {
         };
-        cucumber_junit_vsts.generateJunitFile(options);
         var generatedxml = cucumber_junit_vsts.jsonToXml(jsonFileRaw,options);
         expect(generatedxml).to.equal(outputXml, "compare generated XML with expected XML");
     });
@@ -28,9 +27,7 @@ describe('#cucumber_junit_vsts', function() {
         var generatedxml = cucumber_junit_vsts.jsonToXml(jsonFileRaw,options);
         expect(generatedxml).to.equal(outputXml, "compare generated XML <option.strict> with expected XML");
     });
-/**
- * TODO: To be fixed
- */
+
     it('empty Steps', function() {
         var jsonFileRaw = loadFile('empty_steps/input.json'),
             outputXml = loadFile('empty_steps/output.xml');
@@ -41,9 +38,6 @@ describe('#cucumber_junit_vsts', function() {
         expect(generatedxml).to.equal(outputXml, "compare empty Steps");
     });
 
-/**
- * TODO: To be fixed
- */
     it('empty result', function() {
         var jsonFileRaw = loadFile('empty_result/input.json'),
             outputXml = loadFile('empty_result/output.xml');

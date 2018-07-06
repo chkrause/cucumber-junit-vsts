@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-    <testsuite name="ootb.-login;check-forgot-password" tests="8" failures="0" skipped="0">
+    <testsuite name="Feature: OOTB. Login" tests="1" failures="0" skipped="0">
         <properties>
-            <property name="@should_test" value="true">
-            </property>
-            <property name="@now" value="true">
-            </property>
             <property name="URI" value="features/_OOTB_login.feature">
             </property>
         </properties>
-        <testcase name="Given the app is running" classname="ootb.-login;check-forgot-password">
-        </testcase>
-        <testcase name="* I press &quot;Log in&quot; button" classname="ootb.-login;check-forgot-password">
-        </testcase>
-        <testcase name="* I should see &quot;Sign in&quot; label" classname="ootb.-login;check-forgot-password">
-        </testcase>
-        <testcase name="* I press a &quot;Forgot Your Password?&quot; label" classname="ootb.-login;check-forgot-password">
-        </testcase>
-        <testcase name="* I should see &quot;ENTER YOUR EMAIL&quot; label" classname="ootb.-login;check-forgot-password">
-        </testcase>
-        <testcase name="* I enter &quot;&lt;input&gt;&quot; email" classname="ootb.-login;check-forgot-password">
-        </testcase>
-        <testcase name="* I press a &quot;Send&quot; button" classname="ootb.-login;check-forgot-password">
-        </testcase>
-        <testcase name="* I should see &quot;&lt;output&gt;&quot; notification" classname="ootb.-login;check-forgot-password">
+        <testcase name="Scenario Outline: Check Forgot Password" time="0">
+            <system-out><![CDATA[Feature: OOTB. Login
+Scenario Outline: Check Forgot Password
+
+Given the app is running ()
+* I press "Log in" button ()
+* I should see "Sign in" label ()
+* I press a "Forgot Your Password?" label ()
+* I should see "ENTER YOUR EMAIL" label ()
+* I enter "<input>" email ()
+* I press a "Send" button ()
+* I should see "<output>" notification ()
+]]></system-out>
         </testcase>
     </testsuite>
 </testsuites>
